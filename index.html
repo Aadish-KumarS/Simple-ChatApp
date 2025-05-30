@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Chat App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="navbar">
+    <div style="display: flex; gap: .5rem; align-items: center;">
+      <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      <div class="logo">ChatApp</div>
+    </div>
+    <div style="display: flex; gap: 1rem;">
+      <button class="dark-mode-toggle" id="darkModeToggle">🌙</button>
+      <div class="user-avatar">CL</div>
+    </div>
+  </div>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  
+  <div class="main-container">
+    <div class="sidebar">
+      <ul class="chat-list">
+        <li class="chat-item active" data-chat="emma">
+          <div class="avatar" style="background:#4e8ef7">
+            EM
+            <div class="status-dot online"></div>
+          </div>
+          <div class="chat-info">
+            <div class="chat-name">Emma Thompson</div>
+            <div class="chat-preview">I've sent you the latest project f...</div>
+          </div>
+        </li>
+        <li class="chat-item" data-chat="michael">
+          <div class="avatar" style="background:#88c057">
+            MJ
+            <div class="status-dot online"></div>
+          </div>
+          <div class="chat-info">
+            <div class="chat-name">Michael Johnson</div>
+            <div class="chat-preview">Are we still meeting for coffee to...</div>
+          </div>
+        </li>
+        <li class="chat-item" data-chat="sarah">
+          <div class="avatar" style="background:#f39c12">
+            SA
+            <div class="status-dot inactive"></div>
+          </div>
+          <div class="chat-info">
+            <div class="chat-name">Sarah Davis</div>
+            <div class="chat-preview">Thanks for the quick response! 👍</div>
+          </div>
+        </li>
+        <li class="chat-item" data-chat="david">
+          <div class="avatar" style="background:#e74c3c">
+            DL
+            <div class="status-dot online"></div>
+          </div>
+          <div class="chat-info">
+            <div class="chat-name">David Lee</div>
+            <div class="chat-preview">Did you get a chance to review th...</div>
+          </div>
+        </li>
+        <li class="chat-item" data-chat="ava">
+          <div class="avatar" style="background:#9b59b6">
+            AP
+            <div class="status-dot inactive"></div>
+          </div>
+          <div class="chat-info">
+            <div class="chat-name">Ava Patel</div>
+            <div class="chat-preview">The wireframes are ready for feed...</div>
+          </div>
+        </li>
+        <li class="chat-item" data-chat="liam">
+          <div class="avatar" style="background:#16a085">
+            LW
+            <div class="status-dot online"></div>
+          </div>
+          <div class="chat-info">
+            <div class="chat-name">Liam Wright</div>
+            <div class="chat-preview">Can you send me the analytics rep...</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="chat-panel">
+      <div class="chat-header">
+        <div class="chat-user-avatar">
+          EM
+          <div class="status-dot online"></div>
+        </div>
+        <div class="chat-user-info">
+          <div class="chat-user-name">Emma Thompson</div>
+          <div class="chat-user-status">Online</div>
+        </div>
+      </div>
+      <div class="chat-messages" id="chat-messages">
+        <div class="message bot">
+          <div class="bubble">
+            Oh, I almost forgot – do you have the latest version of the client presentation?
+            <div class="reactions">
+              <span>👍</span>
+              <span>❤️</span>
+              <span>😂</span>
+              <span>👎</span>
+            </div>
+          </div>
+          <div class="timestamp">12:05 PM</div>
+        </div>
+        <div class="message user">
+          <div class="bubble">
+            I've just sent it to your email. It includes all the updates we discussed!
+            <div class="reactions">
+              <span>👍</span>
+              <span>❤️</span>
+              <span>😂</span>
+              <span>👎</span>
+            </div>
+          </div>
+          <div class="timestamp">12:15 PM</div>
+        </div>
+        <div class="message bot">
+          <div class="bubble">
+            Got it, thanks! I'll review it before our lunch.
+            <div class="reactions">
+              <span>👍</span>
+              <span>❤️</span>
+              <span>😂</span>
+              <span>👎</span>
+            </div>
+          </div>
+          <div class="timestamp">12:20 PM</div>
+        </div>
+        <div class="message user">
+          <div class="bubble">
+            Looking forward to it! 🔥
+            <div class="reactions">
+              <span>👍</span>
+              <span>❤️</span>
+              <span>😂</span>
+              <span>👎</span>
+            </div>
+          </div>
+          <div class="timestamp">12:25 PM</div>
+        </div>
+        <div class="typing-indicator">
+          <span>Typing</span>
+          <div class="typing-dots">
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+          </div>
+        </div>
+      </div>
+      <div class="chat-input">
+        <div class="input-row">
+          <textarea placeholder="Type a message..." rows="1"></textarea>
+          <button id="sendBtn">➤</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
